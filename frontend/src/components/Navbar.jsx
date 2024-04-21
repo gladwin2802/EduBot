@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom"
 import { useLogout } from "../hooks/useLogOut"
 import { useAuthContext } from "../hooks/useAuthContext"
+import edubot from '../assets/edu-bot.png'
 
 const Navbar = () => {
 
@@ -14,7 +15,10 @@ const Navbar = () => {
         <header>
             <div className="container">
                 <Link to="/">
-                    <h1>Edu Bot</h1>
+                    <div className="title-logo-container">
+                        <img src={edubot} alt="" width={"50px"} height={"50px"} />
+                        <h1>Edu Bot</h1>
+                    </div>
                 </Link>
                 <nav>
                     {user && (<div>
